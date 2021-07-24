@@ -4,11 +4,11 @@
 	<parent>
 		<artifactId>sfg-pet-clinic</artifactId>
 		<groupId>ajay.springframework</groupId>
-		<version>0.0.2</version>
+		<version>0.0.3-SNAPSHOT</version>
 	</parent>
 	<groupId>ajay.springframework.web</groupId>
 	<artifactId>pet-clinic-web</artifactId>
-	<version>0.0.1</version>
+	<version>0.0.2-SNAPSHOT</version>
 	<packaging>jar</packaging>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -42,7 +42,7 @@
 		<dependency>
 			<groupId>ajay.springframework.data</groupId>
 			<artifactId>pet-clinic-data</artifactId>
-			<version>0.0.1</version>
+			<version>0.0.2-SNAPSHOT</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
