@@ -1,4 +1,4 @@
-package model;
+package ajay.springframework.sfgpetclinic.model;
 
 public class Person {
 	
