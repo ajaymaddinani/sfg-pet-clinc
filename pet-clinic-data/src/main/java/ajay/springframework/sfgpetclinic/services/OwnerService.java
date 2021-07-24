@@ -4,13 +4,6 @@ import java.util.Set;
 
 import ajay.springframework.sfgpetclinic.model.Owner;
 
-public interface OwnerService {
-
-	Owner findById(Long id);
-	
-	Owner save(Owner owner);
-	
-	Owner findByLastName(String lastName);
-	
+public interface OwnerService extends CrudService<Owner, Long> {
 	Set<Owner>findAll();
 }
