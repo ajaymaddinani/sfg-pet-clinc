@@ -1,4 +1,4 @@
-package ajay.springframework.sgfpetclinic.map;
+package ajay.springframework.sfgpetclinic.map;
 
 import java.util.Set;
 
