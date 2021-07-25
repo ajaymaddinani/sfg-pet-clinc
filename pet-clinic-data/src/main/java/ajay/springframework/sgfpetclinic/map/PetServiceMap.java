@@ -3,9 +3,9 @@ package ajay.springframework.sgfpetclinic.map;
 import java.util.Set;
 
 import ajay.springframework.sfgpetclinic.model.Pet;
-import ajay.springframework.sfgpetclinic.services.CrudService;
+import ajay.springframework.sfgpetclinic.services.PetService;
 
-public class PetServiceMap extends AbstractMapService<Pet, Long> implements CrudService<Pet, Long>
+public class PetServiceMap extends AbstractMapService<Pet, Long> implements PetService
 {
 
 	@Override

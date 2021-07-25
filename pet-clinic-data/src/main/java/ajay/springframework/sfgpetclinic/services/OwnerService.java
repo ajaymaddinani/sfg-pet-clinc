@@ -5,5 +5,5 @@ import java.util.Set;
 import ajay.springframework.sfgpetclinic.model.Owner;
 
 public interface OwnerService extends CrudService<Owner, Long> {
-	Set<Owner>findAll();
+	Owner findByLastName(String lastName);
 }

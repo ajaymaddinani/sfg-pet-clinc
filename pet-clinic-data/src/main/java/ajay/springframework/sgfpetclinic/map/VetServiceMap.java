@@ -3,9 +3,9 @@ package ajay.springframework.sgfpetclinic.map;
 import java.util.Set;
 
 import ajay.springframework.sfgpetclinic.model.Vet;
-import ajay.springframework.sfgpetclinic.services.CrudService;
+import ajay.springframework.sfgpetclinic.services.VetService;
 
-public class VetServiceMap extends AbstractMapService<Vet, Long> implements CrudService<Vet, Long>
+public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetService
 {
 
 	@Override
@@ -32,6 +32,12 @@ public class VetServiceMap extends AbstractMapService<Vet, Long> implements Crud
 	@Override
 	public void delete(Vet entity) {
 		super.deleteEntity(entity);
+	}
+
+	@Override
+	public Vet findByLastName(String lastName) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

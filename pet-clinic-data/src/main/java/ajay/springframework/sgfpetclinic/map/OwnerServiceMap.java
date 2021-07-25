@@ -3,9 +3,9 @@ package ajay.springframework.sgfpetclinic.map;
 import java.util.Set;
 
 import ajay.springframework.sfgpetclinic.model.Owner;
-import ajay.springframework.sfgpetclinic.services.CrudService;
+import ajay.springframework.sfgpetclinic.services.OwnerService;
 
-public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements CrudService<Owner, Long>
+public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements OwnerService
 {
 
 	@Override
@@ -32,6 +32,11 @@ public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements 
 	@Override
 	public void delete(Owner entity) {
 		super.deleteEntity(entity);
+	}
+
+	@Override
+	public Owner findByLastName(String lastName) {
+		return null;
 	}
 
 }
