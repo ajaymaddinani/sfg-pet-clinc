@@ -2,9 +2,12 @@ package ajay.springframework.sgfpetclinic.map;
 
 import java.util.Set;
 
+import org.springframework.stereotype.Service;
+
 import ajay.springframework.sfgpetclinic.model.Pet;
 import ajay.springframework.sfgpetclinic.services.PetService;
 
+@Service
 public class PetServiceMap extends AbstractMapService<Pet, Long> implements PetService
 {
 
