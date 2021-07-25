@@ -2,6 +2,9 @@ package ajay.springframework.sfgpetclinic.model;
 
 import java.time.LocalDate;
 
+import javax.persistence.Entity;
+
+@Entity
 public class Pet extends BaseEntity {
 
 	private PetType petType;
