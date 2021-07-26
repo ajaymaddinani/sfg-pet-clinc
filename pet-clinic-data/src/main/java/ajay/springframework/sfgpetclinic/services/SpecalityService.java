@@ -1,5 +1,7 @@
 package ajay.springframework.sfgpetclinic.services;
 
-public interface SpecalityService {
+import ajay.springframework.sfgpetclinic.model.Specality;
+
+public interface SpecalityService extends CrudService<Specality, Long>{
 
 }
