@@ -35,7 +35,12 @@ public class DataLoader implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		
+		LoadData();
+	}
+
+
+
+	private void LoadData() {
 		PetType petType = new PetType();
 		petType.setName("Dog");
 		
@@ -114,7 +119,6 @@ public class DataLoader implements CommandLineRunner {
 		petTypeService.save(bird);
 		
 		System.out.println("loaded pet types");
-		
 	}
 
 }
