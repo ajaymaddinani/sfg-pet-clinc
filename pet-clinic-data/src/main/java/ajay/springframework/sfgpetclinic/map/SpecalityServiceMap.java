@@ -2,9 +2,12 @@ package ajay.springframework.sfgpetclinic.map;
 
 import java.util.Set;
 
+import org.springframework.stereotype.Service;
+
 import ajay.springframework.sfgpetclinic.model.Specality;
 import ajay.springframework.sfgpetclinic.services.SpecalityService;
 
+@Service
 public class SpecalityServiceMap extends AbstractMapService<Specality, Long> implements SpecalityService{
 
 	@Override

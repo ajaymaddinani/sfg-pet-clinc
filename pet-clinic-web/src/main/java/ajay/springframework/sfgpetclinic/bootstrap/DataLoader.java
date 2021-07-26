@@ -8,9 +8,11 @@ import org.springframework.stereotype.Component;
 import ajay.springframework.sfgpetclinic.model.Owner;
 import ajay.springframework.sfgpetclinic.model.Pet;
 import ajay.springframework.sfgpetclinic.model.PetType;
+import ajay.springframework.sfgpetclinic.model.Specality;
 import ajay.springframework.sfgpetclinic.model.Vet;
 import ajay.springframework.sfgpetclinic.services.OwnerService;
 import ajay.springframework.sfgpetclinic.services.PetTypeSevice;
+import ajay.springframework.sfgpetclinic.services.SpecalityService;
 import ajay.springframework.sfgpetclinic.services.VetService;
 
 @Component
@@ -19,12 +21,14 @@ public class DataLoader implements CommandLineRunner {
 	private final OwnerService ownerService;
 	private final VetService vetService;
 	private final PetTypeSevice petTypeService;
+	private final SpecalityService specalityService;
 
-	public DataLoader(OwnerService ownerService, VetService vetService, PetTypeSevice petTypeService) {
+	public DataLoader(OwnerService ownerService, VetService vetService, PetTypeSevice petTypeService, SpecalityService specalityService) {
 		super();
 		this.ownerService = ownerService;
 		this.vetService = vetService;
 		this.petTypeService = petTypeService;
+		this.specalityService = specalityService;
 	}
 
 	
@@ -69,10 +73,31 @@ public class DataLoader implements CommandLineRunner {
 
 		System.out.println("loaded owners");
 
+		Specality specality = new Specality();
+		specality.setId(4L);
+		specality.setDescription("Radiology");
+		
+		specalityService.save(specality);
+		
+		specality = new Specality();
+		specality.setId(5L);
+		specality.setDescription("Sugery");
+		
+		specalityService.save(specality);
+		
+		specality = new Specality();
+		specality.setId(6L);
+		specality.setDescription("Dentistry");
+		
+		specalityService.save(specality);
+		
+		System.out.println("loaded pet specalities");
+		
 		Vet vet = new Vet();
 		vet.setId(1L);
 		vet.setFirstName("Deetya");
 		vet.setLastName("Maddinani");
+		vet.getSpecalities().add(specality);
 		vetService.save(vet);
 		System.out.println("loaded vets");
 		
