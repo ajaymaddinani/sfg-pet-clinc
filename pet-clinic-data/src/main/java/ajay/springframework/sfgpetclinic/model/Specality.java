@@ -1,7 +1,13 @@
 package ajay.springframework.sfgpetclinic.model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="specalities")
 public class Specality extends BaseEntity{
-	
+	@Column(name="description")
 	private String description;
 
 	public String getDescription() {
