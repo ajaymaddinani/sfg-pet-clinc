@@ -37,10 +37,4 @@ public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetS
 		super.deleteEntity(entity);
 	}
 
-	@Override
-	public Vet findByLastName(String lastName) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
 }
